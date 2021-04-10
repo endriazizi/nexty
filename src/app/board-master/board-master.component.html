@@ -1,0 +1,43 @@
+<p>board-master works!</p>
+
+<!-- <div class="container">
+    <header class="jumbotron">
+      <p>{{ data.id }}</p>
+    </header>
+</div> -->
+
+<div>
+  <h1>NgFor Table Example</h1>
+  <table>
+      <thead>
+          <tr>
+              <th>id</th>
+              <th>cpuSerial</th>
+              <th>localIP</th>
+              <th>model</th>
+              <th>version</th>
+              <th>personName</th>
+              <th>personBirthdate</th>
+              <th>uuidSupervisor</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let kit of Kits">
+              <th>{{ kit.id }}</th>
+              <td>{{ kit.cpuSerial }}</td>
+              <td>{{ kit.localIP }}</td>
+
+              <th>{{ kit.model }}</th>
+              <td>{{ kit.version }}</td>
+              <td>{{ kit.personName }}</td>
+
+              <th>{{ kit.personBirthdate }}</th>
+              <th>{{ kit.uuidSupervisor }}</th>
+        
+              <td>
+                  <button type="button" >Delete</button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>

@@ -1,0 +1,52 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="home-master">
+        <mat-icon>home</mat-icon> Home
+      </a>
+      <a mat-list-item routerLink="login">
+        <mat-icon>login</mat-icon> Login
+      </a>
+      <a mat-list-item routerLink="master" *ngIf="showMasterBoard">
+        <mat-icon>admin_panel_settings</mat-icon> Home Master
+      </a>
+      <a mat-list-item routerLink="reseller" *ngIf="showResellerBoard">
+        <mat-icon>home</mat-icon> Home Reseller
+      </a>
+      <a mat-list-item routerLink="add-student">
+        <mat-icon>add</mat-icon> Add User
+      </a>
+      <a mat-list-item routerLink="students-list">
+        <mat-icon>format_list_bulleted</mat-icon> User List
+      </a>
+
+      <!-- <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+        <li class="nav-item">
+          <a href="/register" class="nav-link" routerLink="register">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a href="/login" class="nav-link" routerLink="login">Login</a>
+        </li>
+      </ul> -->
+
+      <!-- <li class="nav-item" *ngIf="showAdminBoard">
+        <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
+      </li> -->
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>NEXTY</span>
+    </mat-toolbar>
+    <!-- Add Content Here -->
+    <main class="main-container">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
