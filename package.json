@@ -1,9 +1,10 @@
 {
-  "name": "fe-nexty",
+  "name": "nexty",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start-angular": "ng serve",
+    "dev": "ng serve",
+    "prod": "ng serve --prod",
     "start": "node server.js",
     "heroku-postbuild": "ng build --prod",
     "build": "ng build",

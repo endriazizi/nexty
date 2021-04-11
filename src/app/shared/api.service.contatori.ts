@@ -7,6 +7,7 @@ import { catchError, map } from 'rxjs/operators';
 
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { TokenStorageService } from '../_services/token-storage.service';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,8 @@ import { TokenStorageService } from '../_services/token-storage.service';
 
 export class ApiServiceContatori {
 
-  endpoint: string = 'http://127.0.0.1:1337';
+  endpoint: string = environment.apiBaseUrl;
+  
   headers = new HttpHeaders().set('Content-Type', 'application/json');
 
   constructor(private http: HttpClient,

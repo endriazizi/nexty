@@ -12,10 +12,12 @@
  import { Observable } from 'rxjs';
  
  import { Kit } from '../models/kit.model';
+ import { environment } from '../../environments/environment';
  
  //const API_URL = 'http://localhost:3000/api/test/';
  
- const API_URL = 'http://localhost:1337/';
+//  const API_URL = 'http://localhost:1337/';
+ const API_URL = environment.apiBaseUrl;
  
  
  @Injectable({
@@ -43,7 +45,7 @@
      headers: new HttpHeaders({ 'Content-Type': 'application/json',
      'Authorization': `Bearer ${token}` })
      }
-     return this.http.get<Kit[]>(API_URL + 'kit', httpOptions);
+     return this.http.get<Kit[]>(API_URL + '/kit', httpOptions);
    }
  
  }

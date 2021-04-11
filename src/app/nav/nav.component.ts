@@ -4,6 +4,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { TokenStorageService } from '../_services/token-storage.service';
+import { environment } from '../../environments/environment';
 
 
 @Component({
@@ -12,6 +13,7 @@ import { TokenStorageService } from '../_services/token-storage.service';
   styleUrls: ['./nav.component.scss']
 })
 export class NavComponent implements OnInit {
+  envName= environment.name;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(

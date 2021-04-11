@@ -16,6 +16,9 @@ https://material.angular.io/guide/schematics
 
 https://www.positronx.io/angular-8-mean-stack-tutorial-build-crud-angular-material/
 
+
+ng serve --env=prod
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

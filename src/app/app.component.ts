@@ -18,6 +18,8 @@ import { Component } from '@angular/core';
 import { OnInit } from '@angular/core';
 import { TokenStorageService } from './_services/token-storage.service';
 
+import { environment } from '../environments/environment';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,6 +28,8 @@ import { TokenStorageService } from './_services/token-storage.service';
 
 
 export class AppComponent implements OnInit {
+  envName= environment.name;
+  title= 'nexty';
  // private roles: string[] = [];
   private subscriptions: string[] = [];
   isLoggedIn = false;
