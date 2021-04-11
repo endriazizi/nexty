@@ -1,6 +1,10 @@
 {
-  "name": "nexty-app",
+  "name": "nexty",
   "version": "0.0.0",
+  "engines": {
+    "node": "14.15.1",
+    "npm": "6.14.8"
+  },
   "scripts": {
     "ng": "ng",
     "dev": "ng serve",
@@ -14,9 +18,9 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "~11.2.0",
-    "@angular/compiler-cli": "~11.2.0",
     "@angular/animations": "~11.2.0",
+    "@angular/cli": "^11.2.8",
+    "@angular/compiler-cli": "^11.2.9",
     "@angular/cdk": "^11.2.4",
     "@angular/common": "~11.2.0",
     "@angular/compiler": "~11.2.0",
@@ -34,8 +38,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.0",
-    "@angular/cli": "~11.2.0",
-    "@angular/compiler-cli": "~11.2.0",
+    "@angular/cli": "^11.2.8",
+    "@angular/compiler-cli": "^11.2.9",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
@@ -50,9 +54,5 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.1.2"
-  },
-  "engines": {
-    "node": "12.18.2",
-    "npm": "6.14.5"
   }
 }
